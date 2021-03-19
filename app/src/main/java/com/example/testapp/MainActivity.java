@@ -41,42 +41,6 @@ public class MainActivity extends AppCompatActivity {
     Button button1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //String quere = "https://www.cbr-xml-daily.ru/daily_json.js";
-        //HttpURLConnection connection = null;
-
-        /*try{
-            connection = (HttpURLConnection) new URL(quere).openConnection();
-
-            connection.setRequestMethod("GET");
-            connection.setUseCaches(false);
-            connection.setConnectTimeout(250);
-            connection.setReadTimeout(250);
-
-            connection.connect();
-
-            StringBuilder sb = new StringBuilder();
-
-            if(HttpURLConnection.HTTP_OK == connection.getResponseCode()){
-                BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-
-                String line;
-
-                while ((line = in.readLine()) != null){
-                    sb.append(line);
-                    sb.append("\n");
-                }
-                System.out.println(sb.toString());
-            } else {
-                System.out.println("Fail" + connection.getResponseCode() + ", " + connection.getResponseMessage());
-            }
-
-        } catch (Throwable cause){
-            cause.printStackTrace();
-        } finally{
-            if (connection != null){
-                connection.disconnect();
-            }
-        }*/
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -127,9 +91,6 @@ public class MainActivity extends AppCompatActivity {
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-               //Toast toast = Toast.makeText(getApplicationContext(), String.valueOf(obmen[(int)id]), Toast.LENGTH_SHORT);
-               //toast.show();
-               //obmen[(int)id];
                 try {
 
                 EditText1 = findViewById(R.id.EditText1);
